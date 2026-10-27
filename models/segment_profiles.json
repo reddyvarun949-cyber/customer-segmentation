@@ -1,0 +1,153 @@
+{
+  "model": "KMeans (log1p + StandardScaler)",
+  "k": 5,
+  "features": [
+    "recency_days",
+    "frequency",
+    "monetary",
+    "avg_basket",
+    "coupon_rate",
+    "app_share",
+    "category_variety"
+  ],
+  "integer_features": [
+    "recency_days",
+    "frequency",
+    "category_variety"
+  ],
+  "valid_ranges": {
+    "recency_days": [
+      0,
+      365
+    ],
+    "frequency": [
+      1,
+      60
+    ],
+    "monetary": [
+      1,
+      138401.0
+    ],
+    "avg_basket": [
+      1,
+      4135.0
+    ],
+    "coupon_rate": [
+      0,
+      1
+    ],
+    "app_share": [
+      0,
+      1
+    ],
+    "category_variety": [
+      1,
+      7
+    ]
+  },
+  "overall_medians": {
+    "recency_days": 31.0,
+    "frequency": 9.0,
+    "monetary": 6459.26,
+    "avg_basket": 896.31,
+    "coupon_rate": 0.2,
+    "app_share": 0.59,
+    "category_variety": 3.0
+  },
+  "silhouette": 0.289,
+  "stability": {
+    "seed_ari_mean": 0.997,
+    "seed_ari_min": 0.996,
+    "bootstrap_ari_mean": 0.972,
+    "bootstrap_ari_min": 0.94
+  },
+  "reference_date": "2026-01-01",
+  "customers_clustered": 2500,
+  "segments": [
+    {
+      "id": 0,
+      "name": "Deal seekers",
+      "description": "Order fairly regularly but with small baskets, and use a coupon on most orders. Mostly in the app.",
+      "suggested_action": "Targeted coupons on bigger baskets (e.g. 'save ₹100 on orders above ₹800') and bundle offers to raise basket size.",
+      "customers": 505,
+      "share": 0.202,
+      "medians": {
+        "recency_days": 23.0,
+        "frequency": 11.0,
+        "monetary": 5482.95,
+        "avg_basket": 514.33,
+        "coupon_rate": 0.7,
+        "app_share": 0.71,
+        "category_variety": 3.0
+      }
+    },
+    {
+      "id": 1,
+      "name": "Regular shoppers",
+      "description": "Steady, recent customers who order around every few weeks across several categories.",
+      "suggested_action": "Grow the relationship: personalised recommendations, subscriptions for staples, cross-sell new categories.",
+      "customers": 614,
+      "share": 0.246,
+      "medians": {
+        "recency_days": 13.0,
+        "frequency": 17.0,
+        "monetary": 15138.26,
+        "avg_basket": 901.93,
+        "coupon_rate": 0.11,
+        "app_share": 0.61,
+        "category_variety": 5.0
+      }
+    },
+    {
+      "id": 2,
+      "name": "Lapsed customers",
+      "description": "Ordered a few times but have not come back for many months. At risk of being lost.",
+      "suggested_action": "Win-back campaign: 'we miss you' message with a time-limited offer; ask for feedback on why they stopped.",
+      "customers": 440,
+      "share": 0.176,
+      "medians": {
+        "recency_days": 275.0,
+        "frequency": 4.0,
+        "monetary": 2626.26,
+        "avg_basket": 746.95,
+        "coupon_rate": 0.33,
+        "app_share": 0.56,
+        "category_variety": 2.0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Loyal big spenders",
+      "description": "Shop very often, recently, with large baskets across almost every category. Rarely need coupons.",
+      "suggested_action": "Reward and retain: VIP/loyalty tier, early access to new products, free delivery. Avoid unnecessary discounts.",
+      "customers": 315,
+      "share": 0.126,
+      "medians": {
+        "recency_days": 9.0,
+        "frequency": 30.0,
+        "monetary": 51253.73,
+        "avg_basket": 1702.94,
+        "coupon_rate": 0.09,
+        "app_share": 0.82,
+        "category_variety": 7.0
+      }
+    },
+    {
+      "id": 4,
+      "name": "Occasional web shoppers",
+      "description": "Order rarely, almost always on the website, from few categories, with medium-to-large baskets and few coupons.",
+      "suggested_action": "Push the app (first app-order discount) and remind them about categories they have not tried yet.",
+      "customers": 626,
+      "share": 0.25,
+      "medians": {
+        "recency_days": 83.0,
+        "frequency": 4.0,
+        "monetary": 4189.16,
+        "avg_basket": 1122.58,
+        "coupon_rate": 0.0,
+        "app_share": 0.0,
+        "category_variety": 2.0
+      }
+    }
+  ]
+}
